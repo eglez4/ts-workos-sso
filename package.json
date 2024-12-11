@@ -1,0 +1,31 @@
+{
+  "name": "typescript-sso-example-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon index.ts",
+    "build": "tsc -p ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@workos-inc/node": "^2.18.0",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "dotenv": "^16.0.1",
+    "morgan": "^1.10.0",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4",
+    "@types/node": "^18.11.18",
+    "@types/express": "^4.17.16",
+    "@types/morgan": "^1.9.3",
+    "@types/express-session": "^1.17.5",
+    "nodemon": "^2.0.19"
+  }
+}
