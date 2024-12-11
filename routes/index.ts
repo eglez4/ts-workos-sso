@@ -33,7 +33,8 @@ router.get('/', (req: Request, res: Response) => {
     if (session.isloggedin) {
       res.render('login_successful.ejs', {
         profile: JSON.stringify(session.profile, null, 2),
-        first_name: session.first_name
+        first_name: session.profile.profile.first_name,
+        last_name: session.profile.profile.last_name
       })
     } else {
       return res.render('index.ejs')
