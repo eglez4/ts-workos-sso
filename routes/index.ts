@@ -44,6 +44,19 @@ router.get('/', (req: Request, res: Response) => {
   }
 })
 
+router.get('/users', async (req: Request, res: Response) => {
+    let directoryId: string = process.env.WORKOS_DIRECTORY_ID !== undefined ? process.env.WORKOS_DIRECTORY_ID : ''
+    if (typeof req.query.id === 'string') {
+        directoryId = req.query.id
+    }
+
+    const users: List<User> = await workos.directorySync.listUsers({
+        directory: directoryId,
+        limit: 100,
+    })
+    res.render('users.ejs', { users: users.data })
+})
+
 router.post('/login', (req: Request, res: Response) => {
   
   const login_type = req.body.login_method;
