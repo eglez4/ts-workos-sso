@@ -1,5 +1,6 @@
 import express, { Application, Request, Response, Router } from 'express'
-import { ProfileAndToken, WorkOS } from '@workos-inc/node'
+import { ProfileAndToken, WorkOS, User } from '@workos-inc/node'
+import { List } from '@workos-inc/node/lib/common/interfaces/list.interface'
 
 const app: Application = express()
 const router: Router = express.Router()
